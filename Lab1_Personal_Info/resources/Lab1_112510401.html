@@ -1,0 +1,96 @@
+<!DOCTYPE>
+<html>
+<head> <meta charset="UTF-8"></head>
+<body>
+	<table border = "1" >
+		<tr>
+			<th colspan="3">About -- 112510401</th>
+
+		</tr>
+		<tr>
+			<td rowspan="3">
+				<picture><source srcset="https://cornishlime.co.uk/wp-content/uploads/2018/06/u-care-jumbo-sponge.jpg" media="(max-width: 600px)" width="100" height="100">
+				<img src="https://cornishlime.co.uk/wp-content/uploads/2018/06/u-care-jumbo-sponge.jpg" alt="sponge" width="100" height="100"></picture><br>
+				personal photo</td>
+			<td colspan="2">
+				<form action="/action_page.php">
+				Name: <input type="text" name="name"><br>
+				Gender: <input type="radio" name="gender" value="male" checked>Male
+						<input type="radio" name="gender" value="female" checked>Female
+						<input type="radio" name="gender" value="other" checked>Other
+				</form>
+			</td>
+			
+		</tr>
+		<tr>
+			<td>
+			County:<form action="/action_page.php">
+					<select name="county">
+						<option value="Taipei">Taipei</option>
+						<option value="Tainan">Tainan</option>
+						<option value="Taichung">Taichung</option>
+						<option value="TaipTaoyuanei">Taoyuanaipei</option>
+					</select>
+				</form>
+			</td>
+
+			<td>
+			<form action="/action_page.php">
+				<label for="Birthday">Birthday:</label>
+				<input type="date" id="Birthday" name="Birthday">
+
+			</form>
+
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			<form>
+					E-mail:<input type="email" name="email" >
+			</form>
+			</td>
+
+		</tr>
+		
+		<tr>
+			<td>
+			Hobby
+			</td>
+			<td colspan="2"> 
+				<form action="/action_page.php" method="get">
+					<input type="checkbox" name="hobby" value="Swimming "> Swimming 
+					<input type="checkbox" name="hobby" value="Volleyball "> Volleyball 
+					<input type="checkbox" name="hobby" value="Movie "> Movie 
+					<input type="checkbox" name="hobby" value="Game "> Game 
+					<input type="checkbox" name="hobby" value="sleep "> sleep 
+				</form>
+			</td>
+		</tr>
+		<tr >
+			<td>Skill</td>
+			<td colspan="2">
+				<form action="/action_page.php" method="get">
+					<input type="checkbox" name="Skill" value="Java "> Java 
+					<input type="checkbox" name="Skill" value="HTML "> HTML 
+					<input type="checkbox" name="Skill" value="Python "> Python 
+					<input type="checkbox" name="Skill" value="Microsoft Office "> Microsoft Office 
+					<input type="checkbox" name="Skill" value="Premiere "> Premiere 
+				</form>
+
+			</td>
+		</tr>
+		<tr>
+			<td>Say something</td>
+			<td colspan="2"> <input type="text" name="say something" placeholder="Say something here"></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<form method="post" action="http://www.deitel.com">
+					<input type="submit" value="提交">
+					<input type="reset" value="重設">
+			</td>			
+		</tr>
+
+	</table>
+</body>
+</html>
