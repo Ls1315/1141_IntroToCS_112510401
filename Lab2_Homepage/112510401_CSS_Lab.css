@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    background-color: whitesmoke;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #ADD8E6;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+    color: white;
+}
+
+header p {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation */
+nav {
+    background-color: #003366; /* 深藍色 */
+}
+
+.navbar {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 平分四格 */
+    text-align: center;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar li a {
+    color: white;
+    padding: 15px 0;
+    text-decoration: none;
+    display: block;
+    font-size: 1.2em;
+    border-right: 1px solid #ffffff55;
+}
+
+/* 當滑過 dropdown（下拉選單展開時），讓 Service 變成淺藍色 */
+.dropdown:hover > a {
+    color: #ADD8E6; /* 淺藍色 */
+}
+
+.navbar li:last-child a {
+    border-right: none;
+}
+
+.navbar li a:hover {
+    background-color: #1A4A7A;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1A4A7A;
+    width: 100%; /* 下拉選單寬度與上方區塊相同 */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #2E5C8A;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Content */
+main {
+    padding: 30px;
+    text-align: left;
+    width: 80%;
+    margin-left: 20px;
+}
+
+main p {
+    margin-bottom: 12px;
+    font-size: 1.1em;
+}
