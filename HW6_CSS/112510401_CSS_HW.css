@@ -25,11 +25,11 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;  /* ★ 整體往上 */
 }
 
 .photo-panel {
-    height: 350px;
+    height: 250px; /* ★ 縮小上方空間，讓內容更往上 */
     background-image: url("profile.jpg");
     background-size: cover;
     background-position: center;
@@ -37,6 +37,19 @@ body {
 
 .text-content {
     padding: 20px;
+    margin-top: -10px; /* ★ 再往上靠一點 */
+}
+
+/* Personal Image */
+.profile-img {
+    display: block;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+.photo-text {
+    font-size: 0.9em;
+    color: #eee;
+    margin-bottom: 10px;
 }
 
 .school-logo {
@@ -54,7 +67,6 @@ body {
 .section {
     margin-bottom: 40px;
 }
-
 .section-title {
     border-bottom: 2px solid #ccc;
     padding-bottom: 5px;
@@ -101,16 +113,17 @@ body {
     margin-top: 0;
 }
 
-ul {
-    list-style: none;
-    padding-left: 0;
+/* Bullet points */
+.hw-column ul,
+.lab-column ul {
+    list-style: disc;
+    padding-left: 20px;
 }
 
 a {
     text-decoration: none;
     color: #555;
 }
-
 a:hover {
     color: #1b80ff;
 }
