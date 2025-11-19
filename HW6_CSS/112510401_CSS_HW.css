@@ -1,0 +1,140 @@
+body {
+    background-color: #d7ebff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Main Container */
+.main-container {
+    width: 1000px;
+    display: flex;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+/* Left Panel */
+.left-panel {
+    width: 30%;
+    background-color: #666;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.photo-panel {
+    height: 350px;
+    background-image: url("profile.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.text-content {
+    padding: 20px;
+}
+
+.school-logo {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Right Panel */
+.right-panel {
+    width: 70%;
+    padding: 25px;
+}
+
+/* Section layout */
+.section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Education */
+.education {
+    display: flex;
+    margin-bottom: 15px;
+}
+.year {
+    width: 30%;
+    font-weight: bold;
+}
+.description {
+    width: 70%;
+}
+
+/* Skills */
+.skills .tag {
+    display: inline-block;
+    background-color: #e2f1ff;
+    color: #2a5d8f;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+/* Homework & Lab */
+.hw-lab-container {
+    display: flex;
+    gap: 20px;
+}
+
+.hw-column, .lab-column {
+    width: 50%;
+    background-color: #f3f7ff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.hw-column h3, .lab-column h3 {
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+a:hover {
+    color: #1b80ff;
+}
+
+/* Favorite Music */
+.favorite-music {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.music-item {
+    text-align: center;
+}
+
+.music-item img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+}
+
+.music-note {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #444;
+}
+
