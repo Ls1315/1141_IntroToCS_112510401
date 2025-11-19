@@ -1,102 +1,113 @@
 body {
-    background-color: #d7ebff;
+    background-color: #e8f2ff;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
+    padding: 40px;
     margin: 0;
     font-family: Arial;
 }
 
-/* Main Container */
+/* Main Layout */
 .main-container {
     width: 1000px;
     display: flex;
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 12px rgba(0,0,0,0.2);
     overflow: hidden;
 }
 
 /* Left Panel */
 .left-panel {
     width: 30%;
-    background-color: #666;
+    background-color: #b8d1ff;   /* 淺藍色（示範圖） */
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;  /* ★ 整體往上 */
+    align-items: center;
+    padding-bottom: 20px;
 }
 
-.photo-panel {
-    height: 250px; /* ★ 縮小上方空間，讓內容更往上 */
-    background-image: url("profile.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.text-content {
-    padding: 20px;
-    margin-top: -10px; /* ★ 再往上靠一點 */
-}
-
-/* Personal Image */
+/* Personal Photo */
 .profile-img {
-    display: block;
-    margin-bottom: 5px;
-    border-radius: 10px;
-}
-.photo-text {
-    font-size: 0.9em;
-    color: #eee;
-    margin-bottom: 10px;
+    width: 230px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 20px 0 10px 0;
 }
 
+/* Text Content */
+.text-content {
+    width: 85%;
+    text-align: left;
+}
+
+.name {
+    margin: 5px 0 0 0;
+}
+
+.subtitle {
+    margin-top: -5px;
+    font-size: 0.9em;
+}
+
+/* ★ White Underline for ABOUT ME / CONTACT */
+.text-content h3 {
+    border-bottom: 2px solid white;   /* ★ 改成白色底線 */
+    padding-bottom: 5px;
+    margin-top: 18px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+/* NCCU Logo */
 .school-logo {
-    width: 100%;
+    width: 90%;
     margin-top: 20px;
 }
 
 /* Right Panel */
 .right-panel {
     width: 70%;
-    padding: 25px;
+    padding: 30px 35px;
 }
 
-/* Section layout */
-.section {
-    margin-bottom: 40px;
-}
+/* Section Title (Right Panel) */
 .section-title {
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #cfcfcf;
     padding-bottom: 5px;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
 /* Education */
 .education {
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
+
 .year {
-    width: 30%;
+    width: 28%;
     font-weight: bold;
 }
+
 .description {
-    width: 70%;
+    width: 72%;
 }
 
 /* Skills */
 .skills .tag {
     display: inline-block;
-    background-color: #e2f1ff;
-    color: #2a5d8f;
-    padding: 6px 12px;
+    background-color: #e6f0ff;
+    color: #2a58a5;
+    padding: 6px 14px;
     border-radius: 20px;
-    margin: 5px;
+    margin: 4px;
 }
 
-/* Homework & Lab */
+/* Homework & Lab – Two Cards */
 .hw-lab-container {
     display: flex;
     gap: 20px;
@@ -104,35 +115,36 @@ body {
 
 .hw-column, .lab-column {
     width: 50%;
-    background-color: #f3f7ff;
+    background-color: #f5f7ff;
     padding: 15px;
     border-radius: 10px;
 }
 
 .hw-column h3, .lab-column h3 {
     margin-top: 0;
+    font-weight: bold;
 }
 
 /* Bullet points */
-.hw-column ul,
-.lab-column ul {
+ul {
     list-style: disc;
-    padding-left: 20px;
+    padding-left: 22px;
 }
 
 a {
     text-decoration: none;
-    color: #555;
+    color: #1a4ea6;
 }
+
 a:hover {
-    color: #1b80ff;
+    color: #003a99;
 }
 
 /* Favorite Music */
 .favorite-music {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    margin-top: 15px;
 }
 
 .music-item {
@@ -140,14 +152,16 @@ a:hover {
 }
 
 .music-item img {
-    width: 90px;
-    height: 90px;
-    border-radius: 10px;
+    width: 70px;
+    height: 70px;
 }
 
 .music-note {
-    margin-top: 10px;
+    margin-top: 12px;
     font-size: 0.9em;
-    color: #444;
+    color: #555;
 }
+
+
+
 
