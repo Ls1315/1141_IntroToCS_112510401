@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>112510401_HW7_1A2B</title>
+</head>
+<body>
+
+  <h1>112510401_HW7_1A2B</h1>
+  <input type="text" id="userGuess" placeholder="Enter 4 unique digits">
+  <button onclick="play()">Guess</button>
+
+  <div id="log">
+      <h3>Game Record:</h3>
+  </div>
+
+<script>
+  // Generate 4 unique digits
+  function generateAnswer() {
+    const digits = Array.from({ length: 10 }, (_, i) => i.toString());
+    let ans = "";
+    while (ans.length < 4) {
+      const index = Math.floor(Math.random() * digits.length);
+      ans += digits.splice(index, 1)[0];
+    }
+    return ans;
+  }
+
+  const answer = generateAnswer();
+  let attempts = 0;
+
+  // Validate input exactly 4 digits + all unique
+  function isValid(str) {
+    if (str.length !== 4) return false;
+    if (!/^\d{4}$/.test(str)) return false;
+    if (new Set(str).size !== 4) return false;
+    return true;
+  }
+
+  // Compare logic: count A and B
+  function checkAB(guess, ans) {
+    let A = 0, B = 0;
+    for (let i = 0; i < 4; i++) {
+      if (guess[i] === ans[i]) A++;
+      else if (ans.includes(guess[i])) B++;
+    }
+    return `${A}A${B}B`;
+  }
+
+  // Main game flow
+  function play() {
+    const inputField = document.getElementById("userGuess");
+    const guess = inputField.value;
+
+    // Validation
+    if (!isValid(guess)) {
+      alert("請輸入 4 個不重複的數字！");
+      inputField.value = "";
+      return;
+    }
+
+    attempts++;
+
+    const result = checkAB(guess, answer);
+
+    // Write log
+    const log = document.getElementById("log");
+    const record = document.createElement("div");
+    record.textContent = `第 ${attempts} 次： ${guess} → ${result}`;
+    log.appendChild(record);
+
+    // Guess correct
+    if (result === "4A0B") {
+      alert(`答對了！總共猜了 ${attempts} 次`);
+      inputField.disabled = true;
+      document.querySelector("button").disabled = true;
+    }
+
+    inputField.value = "";
+  }
+</script>
+
+</body>
+</html>
