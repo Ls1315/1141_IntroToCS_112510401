@@ -16,7 +16,7 @@
   </div>
 
 <script>
-  // Generate 4 unique digits
+  // 產生 4 個不重複的數字
   function generateAnswer() {
     const digits = Array.from({ length: 10 }, (_, i) => i.toString());
     let ans = "";
@@ -30,15 +30,29 @@
   const answer = generateAnswer();
   let attempts = 0;
 
-  // Validate input exactly 4 digits + all unique
+  // 檢查輸入是否正確（alert錯誤）
   function isValid(str) {
-    if (str.length !== 4) return false;
-    if (!/^\d{4}$/.test(str)) return false;
-    if (new Set(str).size !== 4) return false;
+    // 長度必須是 4
+    if (str.length !== 4) {
+      alert("請輸入剛好 4 位數字！");
+      return false;
+    }
+
+    // 必須全部是數字
+    if (!/^\d{4}$/.test(str)) {
+      alert("輸入必須全部為數字！");
+      return false;
+    }
+
+    // 數字不能重複
+    if (new Set(str).size !== 4) {
+      alert("四個數字不能重複！");
+      return false;
+    }
+
     return true;
   }
 
-  // Compare logic: count A and B
   function checkAB(guess, ans) {
     let A = 0, B = 0;
     for (let i = 0; i < 4; i++) {
@@ -48,33 +62,32 @@
     return `${A}A${B}B`;
   }
 
-  // Main game flow
   function play() {
     const inputField = document.getElementById("userGuess");
     const guess = inputField.value;
 
-    // Validation
+    // 驗證輸入
     if (!isValid(guess)) {
-      alert("請輸入 4 個不重複的數字！");
       inputField.value = "";
       return;
     }
 
     attempts++;
 
+    // 得到 A/B 結果
     const result = checkAB(guess, answer);
 
-    // Write log
+    // 顯示紀錄
     const log = document.getElementById("log");
     const record = document.createElement("div");
-    record.textContent = `第 ${attempts} 次： ${guess} → ${result}`;
+    record.textContent = `第 ${attempts} 次：${guess} → ${result}`;
     log.appendChild(record);
 
-    // Guess correct
+    // 猜對
     if (result === "4A0B") {
       alert(`答對了！總共猜了 ${attempts} 次`);
-      inputField.disabled = true;
       document.querySelector("button").disabled = true;
+      inputField.disabled = true;
     }
 
     inputField.value = "";
@@ -83,3 +96,4 @@
 
 </body>
 </html>
+
