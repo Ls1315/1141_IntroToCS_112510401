@@ -1,15 +1,19 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Lab7</title>
+    <meta charset="UTF-8">
+    <title>JS2 Lab4 - Grade Statistics</title>
     <link rel="stylesheet" href="112510401_JS2_Lab4.css">
 </head>
+
 <body>
+
     <p>
         <input id="input1" type="number" placeholder="Math" />
         <input id="input2" type="number" placeholder="English" />
         <input id="button" type="button" value="Submit" />
     </p>
+
     <table id="table" border="1">
         <thead>
             <tr>
@@ -19,17 +23,20 @@
                 <th>Average</th>
             </tr>
         </thead>
+
         <tbody id="tableBody">
         </tbody>
+
         <tfoot>
             <tr>
-                <th>Average</th>
+                <th colspan="2">Average</th>
                 <td id="mathAvg">0.00</td>
                 <td id="englishAvg">0.00</td>
                 <td id="overallAvg">0.00</td>
             </tr>
         </tfoot>
     </table>
+
     <script src="112510401_JS2_Lab4.js"></script>
 </body>
 </html>
