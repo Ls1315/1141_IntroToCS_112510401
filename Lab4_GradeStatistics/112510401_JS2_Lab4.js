@@ -34,7 +34,7 @@ document.getElementById("button").addEventListener("click", function () {
     document.getElementById("input1").value = '';
     document.getElementById("input2").value = '';
 });
-function updateAverages() {
+function updateColumnAverages() {
     const mathAvg = calculateAverage(mathValues).toFixed(2);
     const englishAvg = calculateAverage(englishValues).toFixed(2);
     const overallAvg = (
